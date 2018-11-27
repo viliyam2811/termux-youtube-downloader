@@ -8,14 +8,15 @@ if [[ $1 =~ ^.*youtu.*$ ]]; then
 	echo "${bold}Youtube-dl${normal}"
 	echo "> ${1}"
 	
-	echo $'\nDownload as an mp3 file ? (Y/N/E)'
+	echo $'\nDownload as an MP3 file ? (A)'
+	echo $'\nDownload as an Video file ? (V)'
 	read -p "> " -n 1 -r
 	echo $'\n'
 	
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
+	if [[ $REPLY =~ ^[Aa]$ ]]; then
 		echo 'Downloading mp3 file...'
 		youtube-dl -f 'bestaudio' -o '/data/data/com.termux/files/home/storage/music/youtube-dl/%(title)s.f%(format_id)s.%(ext)s' $1
-	elif [[ $REPLY =~ ^[Nn]$ ]]; then
+	elif [[ $REPLY =~ ^[Vv]$ ]]; then
 		echo 'Downloading video...'
 		youtube-dl -o "/data/data/com.termux/files/home/storage/movies/youtube-dl/%(title)s.%(ext)s" -f "best[height<=480]" $1
 	else
