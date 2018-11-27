@@ -8,7 +8,7 @@ apt upgrade
 pkg install ncurses-utils
 
 pkg install python
-pip youtube-dl
+pip install youtube-dl
 
 mkdir ~/bin
 
