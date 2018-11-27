@@ -1,7 +1,17 @@
-if ! which command > /dev/null; then
-   echo -e "Command not found! Install? (y/n) \c"
-   read
-   if "$REPLY" = "y"; then
-      sudo apt-get install command
-   fi
-f
+#!/bin/bash
+
+termux-setup-storage
+
+apt update
+apt upgrade
+
+pkg install ncurses-utils
+
+pkg install python
+pip youtube-dl
+
+mkdir ~/bin
+
+cp ~/termux-youtube-downloader/termux-url-opener ~/bin/
+
+
