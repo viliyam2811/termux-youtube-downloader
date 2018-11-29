@@ -1,0 +1,20 @@
+echo -e "----------------------------"
+figlet Viliyam && fig;et Vasava
+
+echo -e "----------------------------\n"
+
+echo -e "How to Dowload Youtube Videos?\n"
+
+echo -e " - Open Youtube Aap.\n"
+
+echo -e " - Select the Video you want to Dowlload.\n"
+
+echo -e " - Click on Share Button.\n"
+
+echo -e " - Then Select Termux.\n"
+
+echo -e " - Select Your Download Format.\n"
+
+
+
+

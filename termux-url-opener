@@ -1,0 +1,39 @@
+#!/bin/bash
+
+clear
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+if [[ $1 =~ ^.*youtu.*$ ]];
+then
+	echo "${bold}Youtube Downloader.${normal}"
+	
+	echo $'\nDownload Audio-MP3 	? (A)'
+	echo $'\nDownload Video-480p 	? (V)'
+	read -p "> " -n 1 -r
+	echo $'\n'
+	
+	if [[ $REPLY =~ ^[Aa]$ ]];
+	then
+		echo 'Downloading mp3 file...'
+		#youtube-dl -f 'bestaudio' -o '~/storage/music/youtube-dl/%(title)s.f%(format_id)s.%(ext)s' $1
+
+		youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o '~/storage/shared/youtube-dl/audio/%(title)s.%(ext)s' $1
+
+		
+
+	elif [[ $REPLY =~ ^[Vv]$ ]];
+	then
+		echo 'Downloading Video...'
+		youtube-dl -f "best[height<=480]" -o "~/storage/shared/youtube-dl/video/%(title)s.%(ext)s" $1
+
+	else
+		echo "Exiting..."
+	fi
+
+elif [[ $1 =~ ^.*nourlselected.*$ ]]; then
+	echo "ERROR1"
+else
+	echo Unhandled URL type: $1
+fi

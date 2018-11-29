@@ -1,0 +1,36 @@
+#!~/../usr/bin/bash
+
+# -------------------------------
+# Info:
+#   author	: Viliyam Vasava
+#   file	: setup.sh
+#   created	: 29.11.2018
+#   revision	: 29.11.2018
+#   version	: 0.1
+# -------------------------------
+# Requirements:
+#   python, ffmpeg, git, ncurses-utils, youtube-dl.
+# Description:
+#   Setup Shell Script of youtube-dl Downloader for Termux in Android.
+#
+# -------------------------------
+clear
+
+sleep 2;
+
+echo -e "___Installing required packages___\n"
+echo -e "\\n"
+
+sleep 2;
+
+pkg install python ffmpeg ncurses-utils figlet -y && pip install youtube-dl
+
+mkdir ~/bin
+
+cp ~/termux-youtube-downloader/termux-url-opener ~/bin/
+
+cp ~/termux-youtube-downloader/youtube-help ~/../usr/bin
+
+echo -e "___Setting up___"
+
+sleep 2:
