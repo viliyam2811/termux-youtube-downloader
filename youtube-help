@@ -1,5 +1,7 @@
+#!/bin/bash
+
 echo -e "----------------------------"
-figlet Viliyam && fig;et Vasava
+figlet Viliyam && figlet Vasava
 
 echo -e "----------------------------\n"
 
