@@ -2,6 +2,8 @@
 
 clear
 
+figlet Viliyam && figlet Vasava
+
 bold=$(tput bold)
 normal=$(tput sgr0)
 
