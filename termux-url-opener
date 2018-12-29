@@ -1,9 +1,7 @@
 #!/bin/bash
 
 clear
-
-figlet Viliyam && figlet Vasava
-
+echo "Script by : Vilitam Vasava"
 bold=$(tput bold)
 normal=$(tput sgr0)
 
