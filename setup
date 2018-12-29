@@ -18,10 +18,10 @@ clear
 
 sleep 2;
 
-echo  "___Installing required packages___\n"
-echo  "\\n"
+echo  "Installing required packages"
+echo  ""
 
-sleep 2;
+sleep 2
 
 pkg install python ffmpeg ncurses-utils figlet -y && pip install youtube-dl
 
@@ -31,6 +31,6 @@ cp ~/termux-youtube-downloader/termux-url-opener ~/bin/
 
 cp ~/termux-youtube-downloader/youtube-help ~/../usr/bin
 
-echo  "___Setting up___"
+echo  "Setting up"
 
-sleep 2:
+sleep 2
