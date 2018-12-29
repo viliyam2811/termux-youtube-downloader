@@ -16,47 +16,26 @@
 # -------------------------------
 
 ## Setting up storage for termux.
-echo  "\n___Installing 'Termux-Youtube-Downloader'___"
-echo  "\n___Setting up Storage___"
+echo  "Installing 'Termux-Youtube-Downloader'"
+echo  "Setting up Storage"
 termux-setup-storage
-sleep 2;
+sleep 2
 
-echo  "\n___Storage Setup Completed___"
-sleep 2;
+echo  "Storage Setup Completed"
+sleep 2
 
 ## Update Termux repository and packages.
-echo  "___Updatting Termux repository and packages___"
-echo  "\\n"
+echo  "Updatting Termux repository and packages"
+echo  ""
 
 apt update && apt upgrade -y
 
-echo  "\\n"
-echo  "___Update completed___"
-sleep 2;
+echo  ""
+echo  "Update completed"
+sleep 2
 
-echo  "___Preparing Installation___\n"
-echo  "\\n"
-sleep 2;
-
-pkg instal git -y && git clone https://github.com/viliyam2811/termux-youtube-downloader
-
-cd ~/termux-youtube-downloader
-
-chmod +x *
-
-./setup
+echo  "Preparing Installation"
+echo  ""
+sleep 2
 
 cd ~/
-
-echo  "\\n"
-echo  "___Removing unnecessary package"
-
-//pkg uninstall git
-
-#rm -rf ~/termux-youtube-downloader
-
-echo  "\\n"
-echo  "\n___Setup Completed___\n"
-
-youtube-help
-
