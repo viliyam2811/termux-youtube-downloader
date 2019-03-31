@@ -1,7 +1,8 @@
 #!/bin/bash
 
 clear
-echo "Script by : Vilitam Vasava"
+echo ''
+echo "Script by : Viliyam Vasava"
 bold=$(tput bold)
 normal=$(tput sgr0)
 
